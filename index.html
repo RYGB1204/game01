@@ -2,12 +2,16 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | Game1</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <header>
+      <img src="Image/Header.png" alt="100s Fishing">
+    </header>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1024 height=576 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -23,6 +27,12 @@
         <div id="unity-build-title">Game1</div>
       </div>
     </div>
+    <div id="CanNot">
+      <p>Unable to display.<br> Please enlarge your viewport.</p>
+    </div>
+    <footer>
+      <p><span>&copy; 2025 RYGB</span></p>
+    </footer>
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
@@ -83,7 +93,7 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
-
+/*
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
@@ -94,7 +104,7 @@
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-
+*/
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
