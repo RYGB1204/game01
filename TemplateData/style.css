@@ -10,14 +10,10 @@ header {
     background-color: #666666;
     position: relative;
     height: 100px;
-    text-align: center;
-}
-
-header img {
-    position: absolute;
-    width: 200px;
-    left: 10%; top: 50%;
-    transform: translate(-50%, -50%);
+    background-image: url(../Image/Header.png), url(../Image/Fish1.png), url(../Image/Fish2.png), url(../Image/Fish3.png), url(../Image/Fish4.png), url(../Image/Fish5.png), url(../Image/Fish6.png), url(../Image/Fish7.png), url(../Image/Fish8.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 200px, 20px, 40px, 60px, 40px, 100px, 80px, 80px, 200px;
+    background-position: left 3% center, right 75% top 50%, right 68% top 30%, right 60% top 90%, right 53% top 20%, right 43% top 30%, right 31% top 150%, right 25% top -50%, right 3% top 50%;
 }
 
 #unity-container.unity-desktop { text-align: center; width: 1024px; height: 576px; margin: 10px auto 50px; }
@@ -72,6 +68,10 @@ footer p {
         width: 100%;
         height: 100px;
         text-align: center;
+        background-image: url(../Image/Header.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 200px;
     }
 
     header img {
