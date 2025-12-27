@@ -1,112 +1,113 @@
 @charset "utf-8";
 
-body {
-    background-color: #cccccc;
-    font-family: "Noto Sans";
+* {
     padding: 0; margin: 0;
 }
 
-header {
-    background-color: #666666;
+body {
+    background-color: #ccc;
     position: relative;
-    height: 100px;
-    background-image: url(../Image/HeaderText.png), url(../Image/Fish1.png), url(../Image/Fish2.png), url(../Image/Fish3.png), url(../Image/Fish4.png), url(../Image/Fish5.png), url(../Image/Fish6.png), url(../Image/Fish7.png), url(../Image/Fish8.png);
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: 200px, 20px, 40px, 60px, 40px, 100px, 80px, 80px, 200px;
-    background-position: left 3% center, right 75% top 50%, right 68% top 30%, right 60% top 90%, right 53% top 20%, right 43% top 30%, right 31% top 150%, right 25% top -50%, right 3% top 50%;
+    width: 100dvw; height: 100dvh;
+    font-family: "Noto Sans";
 }
 
-#unity-container.unity-desktop { text-align: center; width: 1024px; height: 576px; margin: 10px auto 50px; }
-#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
-#unity-canvas { background: #231F20; }
-.unity-mobile #unity-canvas { width: 100%; height: 100% }
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
-#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
-#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
-
-.unity-mobile #unity-footer { display: none }
-#unity-logo-title-footer { float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center }
-#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
-#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+header, footer {
+    background-color: #666;
+    position: absolute;
+    width: 100%; height: 10svh;
+    background-repeat: no-repeat;
+}
+header {
+    top: 0;
+    background-image: url(../Image/HeaderText.png), url(../Image/Fish1.png), url(../Image/Fish2.png), url(../Image/Fish3.png), url(../Image/Fish4.png), url(../Image/Fish5.png), url(../Image/Fish6.png), url(../Image/Fish7.png), url(../Image/Fish8.png);
+    background-size: 30svh, 3svh, 6svh, 9svh, 6svh, 15svh, 12svh, 12svh, 30svh;
+    background-position: left 3% center, right 75% top 50%, right 68% top 30%, right 60% top 90%, right 53% top 20%, right 43% top 30%, right 31% top 150%, right 22% top -50%, right 3% top 50%;
+}
+footer {
+    bottom: 0;
+    background-image: url(../Image/FooterText.png);
+    background-size: 20svh;
+    background-position: center;
+}
 
 #CanNot {
     display: none;
 }
 
-footer {
-    background-color: #666666;
-    position: relative;
-    height: 100px;
-    text-align: center;
-    background-image: url(../Image/FooterText.png);
-    background-repeat: no-repeat;
-    background-size: 150px;
-    background-position: center;
-}
-
-footer p {
-    color: #ffffff;
+#unity-container.unity-desktop {
     position: absolute;
-    margin: 0;
+    width: 1024px; height: 576px;
+    left: calc(50% - 512px); top: calc(50% - 288px);
+    text-align: center;
+}
+/* #unity-container.unity-desktop { text-align: center; width: 1024px; height: 576px; margin: 10px auto 50px; } */
+/* #unity-container.unity-mobile { position: fixed; width: 100%; height: 100% } */
+#unity-canvas {
+    background: #231F20;
+}
+/* .unity-mobile #unity-canvas { width: 100%; height: 100% } */
+#unity-loading-bar {
+    position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
+    display: none;
+}
+#unity-logo {
+    width: 154px; height: 130px;
+    background: url('unity-logo-dark.png') no-repeat center;
+}
+#unity-progress-bar-empty {
+    width: 141px; height: 18px;
+    margin-top: 10px; margin-left: 6.5px;
+    background: url('progress-bar-empty-dark.png') no-repeat center;
+}
+#unity-progress-bar-full {
+    width: 0%; height: 18px;
+    margin-top: 10px;
+    background: url('progress-bar-full-dark.png') no-repeat center;
 }
 
-@media screen and (max-width: 1024px) {
+/* .unity-mobile #unity-footer { display: none } */
+/* #unity-logo-title-footer {
+    float:left;
+    width: 102px; height: 38px;
+    background: url('unity-logo-title-footer.png') no-repeat center;
+} */
+#unity-fullscreen-button {
+    position: absolute;
+    width: 38px; height: 38px;
+    right: -40px; bottom: 0;
+    background: url('fullscreen-button.png') no-repeat center;
+    cursor:pointer;
+}
+#unity-warning {
+    position: absolute;
+    left: 50%; top: 5%;
+    transform: translate(-50%);
+    background: white;
+    padding: 10px;
+    display: none;
+}
 
-    html {
-        height: 100%;
-    }
 
-    body {
-        position: relative;
-        height: 100%;
-    }
+@media screen and (max-width: 1104px), (max-height: 720px) {
 
     header {
-        background-color: #666666;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100px;
-        text-align: center;
         background-image: url(../Image/HeaderText.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 200px;
+        background-position: center;
+        background-size: 30svh;
     }
-
-    header img {
-    position: absolute;
-    width: 200px;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    }   
 
     #unity-container.unity-desktop {
         display: none;
     }
 
     #CanNot {
+        color: #fff;
         display: block;
         position: absolute;
-        left: 50%; top: 50%;
-        transform: translate(-50%, -50%); 
         width: 220px;
-        text-align: center;
-    }
-
-    #CanNot p {
-        margin: 0;
-    }
-
-    footer {
-        background-color: #666666;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 100px;
+        left: calc(50% - 110px); bottom: 50%;
         text-align: center;
     }
 
