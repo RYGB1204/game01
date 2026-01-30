@@ -44,6 +44,7 @@ footer {
 }
 #unity-canvas {
     background: #231F20;
+    outline: none;
 }
 #unity-loading-bar {
     position: absolute;
