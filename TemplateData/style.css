@@ -9,41 +9,33 @@ body {
     position: relative;
     width: 100dvw; height: 100dvh;
     font-family: "Noto Sans";
-}
-
-header, footer {
-    background-color: #666;
-    position: absolute;
-    width: 100%; height: 10svh;
+    background-image: url("../TemplateData/Background.webp");
     background-repeat: no-repeat;
-}
-header {
-    top: 0;
-    background-image: url(../Image/TextHeader.png), url(../Image/Fish1.png), url(../Image/Fish2.png), url(../Image/Fish3.png), url(../Image/Fish4.png), url(../Image/Fish5.png), url(../Image/Fish6.png), url(../Image/Fish7.png), url(../Image/Fish8.png);
-    background-size: 30svh, 3svh, 6svh, 9svh, 6svh, 15svh, 12svh, 12svh, 30svh;
-    background-position: left 3% center, right 75% top 50%, right 68% top 30%, right 60% top 90%, right 53% top 20%, right 43% top 30%, right 31% top 150%, right 22% top -50%, right 3% top 50%;
-}
-footer {
-    bottom: 0;
-    background-image: url(../Image/TextFooter.png);
-    background-size: 20svh;
+    background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 #CanNot {
     display: none;
 }
 
-#unity-container.unity-desktop {
+#TV {
     position: absolute;
-    width: 1024px; height: 576px;
-    border: 6px solid #000;
-    border-radius: 6px;
-    left: calc(50% - (1024px / 2 + 6px)); top: calc(50% - (576px / 2 + 6px));
+    width: 900px; height: 900px;
+    left: calc(50% - (900px / 2)); top: calc(50% - (900px / 2));
     text-align: center;
+    background-image: url("../TemplateData/TValt.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 #unity-canvas {
+    position: absolute;
     background: #231F20;
+    border: 5px solid #000;
+    border-radius: 5px;
+    left: calc(50% - (800px / 2) - 5px); top: calc(50% - (450px / 2) - 5px);
     outline: none;
 }
 #unity-loading-bar {
@@ -69,12 +61,20 @@ footer {
 
 #unity-fullscreen-button {
     position: absolute;
-    width: 38px; height: 38px;
-    border-radius: 6px;
-    right: -50px; bottom: -6px;
-    background: url('fullscreen-button.png') no-repeat center;
-    cursor:pointer;
+    width: 30px; aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    left: calc(50% - (30px / 2)); bottom: 185px;
+    background-image: url('Button-FullScreen.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: scale 200ms;
 }
+#unity-fullscreen-button:hover {
+    scale: 1.1;
+}
+
 #unity-warning {
     position: absolute;
     left: 50%; top: 5%;
@@ -85,20 +85,14 @@ footer {
 }
 
 
-@media screen and (max-width: 1130px), (max-height: 735px) {
+@media screen and (max-width: 900px), (max-height: 550px) {
 
-    header {
-        background-image: url(../Image/TextHeader.png);
-        background-position: center;
-        background-size: 30svh;
-    }
-
-    #unity-container.unity-desktop {
+    #TV {
         display: none;
     }
 
     #CanNot {
-        color: #fff;
+        color: #000;
         display: block;
         position: absolute;
         width: 220px;
