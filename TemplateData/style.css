@@ -5,7 +5,6 @@
 }
 
 body {
-    background-color: #ccc;
     position: relative;
     width: 100dvw; height: 100dvh;
     font-family: "Noto Sans";
@@ -16,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-#CanNot {
+#NotEnoughViewport {
     display: none;
 }
 
@@ -25,12 +24,12 @@ body {
     width: 900px; height: 900px;
     left: calc(50% - (900px / 2)); top: calc(50% - (900px / 2));
     text-align: center;
-    background-image: url("../TemplateData/TValt.webp");
+    background-image: url("../TemplateData/TV.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-#unity-canvas {
+#ScreenGame {
     position: absolute;
     background: #231F20;
     border: 5px solid #000;
@@ -38,28 +37,28 @@ body {
     left: calc(50% - (800px / 2) - 5px); top: calc(50% - (450px / 2) - 5px);
     outline: none;
 }
-#unity-loading-bar {
+#BarLoading {
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     display: none;
 }
-#unity-logo {
+#LogoUnity {
     width: 154px; height: 130px;
     background: url('unity-logo-dark.png') no-repeat center;
 }
-#unity-progress-bar-empty {
+#BarEmpty {
     width: 141px; height: 18px;
     margin-top: 10px; margin-left: 6.5px;
     background: url('progress-bar-empty-dark.png') no-repeat center;
 }
-#unity-progress-bar-full {
+#BarFull {
     width: 0%; height: 18px;
     margin-top: 10px;
     background: url('progress-bar-full-dark.png') no-repeat center;
 }
 
-#unity-fullscreen-button {
+#ButtonFullScreen {
     position: absolute;
     width: 30px; aspect-ratio: 1 / 1;
     border-radius: 5px;
@@ -71,16 +70,16 @@ body {
     cursor: pointer;
     transition: scale 200ms;
 }
-#unity-fullscreen-button:hover {
+#ButtonFullScreen:hover {
     scale: 1.1;
 }
 
-#unity-warning {
+#WarningUnity {
     position: absolute;
-    left: 50%; top: 5%;
-    transform: translate(-50%);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
     background: white;
-    padding: 10px;
+    padding: 12px;
     display: none;
 }
 
@@ -91,7 +90,7 @@ body {
         display: none;
     }
 
-    #CanNot {
+    #NotEnoughViewport {
         color: #000;
         display: block;
         position: absolute;
