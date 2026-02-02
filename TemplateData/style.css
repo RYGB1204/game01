@@ -16,7 +16,57 @@ body {
 }
 
 #NotEnoughViewport {
-    display: none;
+    visibility: hidden;
+}
+
+#WaveMicro {
+    position: absolute;
+    width: 220px; height: 40px;
+    left: calc(50% - 110px); top: calc(50% - 20px - 310px);
+}
+#WaveMicro #Front {
+    position: absolute;
+    width: 100%; height: 50%;
+    bottom: 0;
+    background-image: url("WaveMicroFront.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: +10;
+}
+#WaveMicro #Back {
+    position: absolute;
+    width: 100%; height: 50%;
+    top: 0;
+    background-image: url("WaveMicroBack.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    z-index: -10;
+}
+#WaveMicro.A #Front, #WaveMicro.A #Back {
+    animation: WaveMicro 2000ms infinite;
+}
+#WaveMicro.B #Front, #WaveMicro.B #Back {
+    animation: WaveMicro 2000ms infinite 200ms;
+}
+#WaveMicro.C #Front, #WaveMicro.C #Back {
+    animation: WaveMicro 2000ms infinite 400ms;
+}
+@keyframes WaveMicro {
+    0% {
+        translate: 0px 0px;
+        scale: 1 1;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        translate: 0px -200px;
+        scale: 2 1;
+        opacity: 0;
+    }
 }
 
 #TV {
@@ -83,20 +133,30 @@ body {
     display: none;
 }
 
+#Cat {
+    position: absolute;
+    width: 3520px; height: 4370px;
+    left: calc(50% - 1760px); top: 50%;
+    background-image: url("Cat.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -5;
+}
 
 @media screen and (max-width: 900px), (max-height: 550px) {
 
-    #TV {
-        display: none;
-    }
-
     #NotEnoughViewport {
         color: #000;
-        display: block;
         position: absolute;
         width: 220px;
         left: calc(50% - 110px); bottom: 50%;
         text-align: center;
+        visibility: visible;
+    }
+    
+    body {
+        visibility: hidden;
     }
 
 }
