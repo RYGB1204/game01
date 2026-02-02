@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <div id="WaveMicro" class="A">
+      <div id="Back"></div>
+      <div id="Front"></div>
+    </div>
+    <div id="WaveMicro" class="B">
+      <div id="Back"></div>
+      <div id="Front"></div>
+    </div>
+    <div id="WaveMicro" class="C">
+      <div id="Back"></div>
+      <div id="Front"></div>
+    </div>
     <div id="TV">
       <canvas id="ScreenGame" width=800 height=450 tabindex="-1"></canvas>
       <div id="BarLoading">
@@ -20,6 +32,7 @@
       <div id="ButtonFullScreen"></div>
       <div id="WarningUnity"> </div>
     </div>
+    <div id="Cat"></div>
     <div id="NotEnoughViewport">
       <p>Unable to display.<br>Please enlarge your viewport.</p>
     </div>
@@ -50,12 +63,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Game01.loader.js";
+      var loaderUrl = buildUrl + "/game01.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/Game01.data",
-        frameworkUrl: buildUrl + "/Game01.framework.js",
-        codeUrl: buildUrl + "/Game01.wasm",
+        dataUrl: buildUrl + "/game01.data",
+        frameworkUrl: buildUrl + "/game01.framework.js",
+        codeUrl: buildUrl + "/game01.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "RYGB",
         productName: "100s Fishing",
